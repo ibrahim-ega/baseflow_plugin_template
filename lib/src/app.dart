@@ -12,7 +12,7 @@ class BaseflowPluginExample extends StatelessWidget {
 
   /// [MaterialColor] to be used in the app [ThemeData]
   final MaterialColor themeMaterialColor =
-      createMaterialColor(const Color.fromRGBO(48, 49, 60, 1));
+      createMaterialColor(const Color.fromRGBO(207, 206, 195, 1));
 
   BaseflowPluginExample({
     super.key,
@@ -31,40 +31,41 @@ class BaseflowPluginExample extends StatelessWidget {
       title: 'Baseflow $pluginName',
       theme: ThemeData(
         colorScheme: Theme.of(context).colorScheme.copyWith(
-              secondary: Colors.white60,
-              surface: const Color.fromRGBO(48, 49, 60, 0.8),
+              secondary: Colors.black54,
+              surface: const Color.fromRGBO(207, 206, 195, 0.8),
             ),
         buttonTheme: ButtonThemeData(
           buttonColor: themeMaterialColor.shade500,
-          disabledColor: themeMaterialColor.withRed(200),
-          splashColor: themeMaterialColor.shade50,
+          disabledColor: themeMaterialColor.withRed(55),
+          splashColor: themeMaterialColor.shade900,
           textTheme: ButtonTextTheme.primary,
         ),
         bottomAppBarTheme: const BottomAppBarTheme(
-          color: Color.fromRGBO(57, 58, 71, 1),
+          color: Color.fromRGBO(198, 197, 184, 1),
         ),
         hintColor: themeMaterialColor.shade500,
-        primarySwatch: createMaterialColor(const Color.fromRGBO(48, 49, 60, 1)),
+        primarySwatch:
+            createMaterialColor(const Color.fromRGBO(207, 206, 195, 1)),
         textTheme: const TextTheme(
           bodyLarge: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 16,
             height: 1.3,
           ),
           bodyMedium: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 18,
             height: 1.2,
           ),
-          labelLarge: TextStyle(color: Colors.white),
+          labelLarge: TextStyle(color: Colors.black),
           displayLarge: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 18,
           ),
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         inputDecorationTheme: const InputDecorationTheme(
-          fillColor: Color.fromRGBO(37, 37, 37, 1),
+          fillColor: Color.fromRGBO(218, 218, 218, 1),
           filled: true,
         ),
       ),
@@ -80,7 +81,7 @@ class BaseflowPluginExample extends StatelessWidget {
   static MaterialColor createMaterialColor(Color color) {
     var strengths = <double>[.05];
     var swatch = <int, Color>{};
-    final r = color.red, g = color.green, b = color.blue;
+    final r = 255 - color.red, g = 255 - color.green, b = 255 - color.blue;
 
     for (var i = 1; i < 10; i++) {
       strengths.add(0.1 * i);
