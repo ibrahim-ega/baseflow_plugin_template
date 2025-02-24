@@ -35,12 +35,10 @@ class _AppHomeState extends State<AppHome> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).bottomAppBarTheme.color,
         actions: _currentPage == 0 ? widget.appBarActions : null,
-        title: Center(
-          child: Image.asset(
-            'assets/logo.png',
-            width: 50,
-            package: 'baseflow_plugin_template',
-          ),
+        title: Image.asset(
+          'assets/logo.png',
+          width: 50,
+          package: 'baseflow_plugin_template',
         ),
       ),
       backgroundColor: Theme.of(context).bottomAppBarTheme.color,
